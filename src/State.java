@@ -15,9 +15,6 @@ public enum State {
                 }
             }
 
-            System.out.println("Выехал из парковки");
-            System.out.println(parking.getParkingCapacity());
-
         }
     },
     ON_THE_WAY("В пути"){
@@ -28,10 +25,6 @@ public enum State {
                 parking.dawnParkingCapacity();
                 parking.addCar(car);
                 journal.put(journal.size() + 1, new Log(car, time));
-                System.out.println("Заехал в парковку");
-                System.out.println(parking.getParkingCapacity());
-
-
             }else {
                 throw new Exception("Парковка заполнена!");
             }

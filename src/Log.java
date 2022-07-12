@@ -4,10 +4,10 @@ import java.util.Locale;
 
 public class Log {
     private Car car;
-    LocalDateTime checkInTime;
-    LocalDateTime checkOutTime;
+    private LocalDateTime checkInTime;
+    private LocalDateTime checkOutTime;
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd MMM yyyy");
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm - dd MMM yyyy");
 
     public Car getCar() {
         return car;
